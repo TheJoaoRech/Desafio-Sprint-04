@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const employee = require('');
+const employee = require('./employeeRouter');
 
 module.exports = (server) => {
 	server.use((req, res, next) => {
