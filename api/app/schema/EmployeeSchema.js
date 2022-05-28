@@ -1,7 +1,17 @@
 const mongoose = require('mongoose'); 
+const { v4: uuidv4 } = require('uuid');
 
 
 const EmployeeSchema = new mongoose.Schema({
+	// employee_id: {
+	// 	type: mongoose.Schema.Types.ObjectId,
+	// },
+
+	employee_id: {
+		type: String,
+		default: uuidv4,
+	},
+
 	name: {
 		type: String,
 		required: true
