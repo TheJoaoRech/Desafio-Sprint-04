@@ -13,5 +13,10 @@ class ProductService {
 		return result;
 	}
 
+	async getById(payload) {
+		const result = await ProductRepository.getById(payload);
+		return result;
+	}
+
 }
 module.exports = new ProductService();
