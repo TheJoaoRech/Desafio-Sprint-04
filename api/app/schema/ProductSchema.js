@@ -6,6 +6,11 @@ const ProductSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	employee_id_fk: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Employee',
+		required: true
+	},
 	category: {
 		type: String,
 		required: true,
