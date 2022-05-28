@@ -5,6 +5,10 @@ class ProductRepository {
 		return await ProductSchema.create(payload);
 	}
 
+	async listAll(payload) {
+		return await ProductSchema.find(payload);
+	}
+
 }
 
 module.exports = new ProductRepository();
