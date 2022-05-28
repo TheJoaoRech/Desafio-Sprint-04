@@ -1,5 +1,5 @@
 //respostas dos metodos 
-const EmployeeService = require('../repository/EmployeeRepository');
+const EmployeeService = require('../service/EmployeeService');
 class EmployeeController {
 	//create employee
 	async create(req, res) {
