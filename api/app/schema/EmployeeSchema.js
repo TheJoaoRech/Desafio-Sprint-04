@@ -7,7 +7,7 @@ const EmployeeSchema = new mongoose.Schema({
 	// 	type: mongoose.Schema.Types.ObjectId,
 	// },
 
-	employee_id: {
+	_id: {
 		type: String,
 		default: uuidv4,
 	},
