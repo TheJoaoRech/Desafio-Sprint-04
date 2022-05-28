@@ -20,13 +20,16 @@ const EmployeeSchema = new mongoose.Schema({
 		type: String,
 		enum: ['activate', 'desactivate'],
 		default: 'activate',
+		required: true
 	},
 	birthday: {
 		type: Date,
 		required: true,
-	}
-
-});
+	},
+	
+},
+{timestamps: true, versionKey: false}
+);
 
 const Employee = mongoose.model('Employee', EmployeeSchema);
 module.exports = Employee;
