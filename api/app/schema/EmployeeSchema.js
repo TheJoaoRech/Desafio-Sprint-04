@@ -1,11 +1,9 @@
 const mongoose = require('mongoose'); 
 const { v4: uuidv4 } = require('uuid');
+const mongoosePaginate = require('mongoose-paginate');
 
 
 const EmployeeSchema = new mongoose.Schema({
-	// employee_id: {
-	// 	type: mongoose.Schema.Types.ObjectId,
-	// },
 
 	_id: {
 		type: String,
