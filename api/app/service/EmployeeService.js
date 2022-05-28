@@ -7,5 +7,10 @@ class EmployeeService {
 		const result = await EmployeeRepository.create(payload);
 		return result;
 	}
+
+	async listAll(payload) {
+		const result = await EmployeeRepository.listAll(payload);
+		return result;
+	}
 }
 module.exports = new EmployeeService();
