@@ -15,6 +15,7 @@ class EmployeeService {
 	async listAll(payload) {
 		const result = await EmployeeRepository.listAll(payload);
 		const birthdateFormat = moment(result.birthday, 'YYYY-MM-DD').format('DD/MM/YYYY');
+
 		const newResult = {
 			employee_id: result[0]._id,
 			name: result[0].name,
