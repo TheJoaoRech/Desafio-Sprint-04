@@ -6,8 +6,7 @@ dotenv.config({
 
 module.exports = {
 	database: {
-		host: process.env.BD_HOST,
-		port: process.env.BD_PORT,
+		host: process.env.DB_HOST,		
 		username: process.env.DB_USER,
 		password: process.env.DB_PASS,
 		collection: process.env.DB_COLLECTION,

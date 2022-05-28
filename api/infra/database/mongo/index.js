@@ -8,13 +8,9 @@ class Database {
 
 	connect(){
 		return mongoose.connect(
-			`mongodb//${config.database.host}/${config.database.collection}`,
-			{
-				user: config.database.username,
-				pass: config.database.password
-			}
+			`mongodb://${config.database.host}/${config.database.collection}`
 		);
 	}
 }
 
-module.exports = new Database().connect();
+module.exports = new Database();
