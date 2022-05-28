@@ -1,6 +1,7 @@
 //respostas dos metodos 
 const EmployeeService = require('../repository/EmployeeRepository');
 class EmployeeController {
+	//create employee
 	async create(req, res) {
 		try {
 			const result = await EmployeeService.create(req.body);
@@ -11,4 +12,4 @@ class EmployeeController {
 	}
 
 }
-console.log();
+module.exports = new EmployeeController ();

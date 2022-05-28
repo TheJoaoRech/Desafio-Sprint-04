@@ -1,4 +1,4 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const employee = require('./employeeRouter');
 
 module.exports = (server) => {
