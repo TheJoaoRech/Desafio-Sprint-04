@@ -15,18 +15,21 @@ class EmployeeService {
 	async listAll(payload) {
 		const result = await EmployeeRepository.listAll(payload);
 		const birthdateFormat = moment(result.birthday, 'YYYY-MM-DD').format('DD/MM/YYYY');
+		let arrayToReturn = [];
+		for (let index = 0; index < result.length; index ++) {
+			arrayToReturn.push({
+				employee_id: result[index]._id,
+				name: result[index].name,
+				cpf: result[index].cpf,
+				office: result[index].office,
+				situation: result[index].situation,
+				birthday: result[index].birthday,
+				createdAt: result[index].createdAt,
+				updatedAt: result[index]. updatedAt
+			});
+		}
 
-		const newResult = {
-			employee_id: result[0]._id,
-			name: result[0].name,
-			cpf: result[0].cpf,
-			office: result[0].office,
-			situation: result[0].situation,
-			birthday: result[0].birthday,
-			createdAt: result[0].createdAt,
-			updatedAt: result[0]. updatedAt
-		};
-		return newResult;
+		return arrayToReturn;
 	}
 }
 module.exports = new EmployeeService();
