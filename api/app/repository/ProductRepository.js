@@ -15,6 +15,14 @@ class ProductRepository {
 		return await ProductSchema.findById(payload);
 	}
 
+	async updateProduct(payload, id) {
+		return await ProductSchema.findByIdAndUpdate(payload, id);
+	}	
+	
+	async deleteProduct(payload) {
+		return await ProductSchema.findByIdAndDelete(payload);
+	}
+
 }
 
 module.exports = new ProductRepository();

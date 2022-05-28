@@ -18,5 +18,14 @@ class ProductService {
 		return result;
 	}
 
+	async updateById(payload, id) {
+		const result = await ProductRepository.updateProduct(payload, id);
+		return result;
+	}
+
+	async deleteById(payload) {
+		const result = await ProductRepository.deleteProduct(payload);
+	}
+
 }
 module.exports = new ProductService();
