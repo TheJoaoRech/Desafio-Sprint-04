@@ -9,4 +9,5 @@ class PeopleRepository{
 	}
 }
 
+
 module.exports = new PeopleRepository();
