@@ -23,7 +23,7 @@
 ```
 
 ### create products
-
+```
 {
 "name": "Guarda Roupas",
 "category": "eletrodomestico",
@@ -44,5 +44,5 @@
 "price": "1999.99",
 "employee_id": " "
 }
-
+```
 
