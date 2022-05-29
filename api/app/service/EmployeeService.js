@@ -6,7 +6,7 @@ const { updateEmployee, deleteEmployee, getById } = require('../repository/Emplo
 class EmployeeService {
 
 	async create(payload) {
-		const birthday = moment(payload.birthday, 'DD/MM/YYYY').format('YYYY/MM/DD');
+		const birthday = moment(payload.birthday, 'DD/MM/YYYY').format('YYYY-MM-DD');
 		const result = await EmployeeRepository.create({ ...payload, birthday });
 	
 		return result;
