@@ -6,10 +6,10 @@ const mongoosePaginate = require('mongoose-paginate');
 
 const EmployeeSchema = new mongoose.Schema({
 
-	_id: {
-		type: String,
-		default: uuidv4,
-	},
+	// _id: {
+	// 	type: mongoose.Schema.Types.ObjectId,
+	// 	default: uuidv4,
+	// },
 
 	name: {
 		type: String,
