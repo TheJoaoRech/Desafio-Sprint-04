@@ -6,7 +6,9 @@ class ProductController {
 			// const result = await (await ProductService.create({ ...req.body, employee_id: req.employee_id})).populate('employee_id');
 			return res.status(201).json(result);
 		} catch (error) {
-			return res.status(400).json(error);
+			return res.status(400).json({
+				message: 'Bad Request', details: [{
+					message: {error}} ] });
 		}
 	}
 
@@ -15,7 +17,9 @@ class ProductController {
 			const result = await ProductService.listAll(req.query);
 			return res.status(200).json(result);
 		} catch (error) {
-			return res.status(400).json(error);
+			return res.status(400).json({
+				message: 'Bad Request', details: [{
+					message: {error}} ] });
 		}
 	}
 
@@ -24,7 +28,9 @@ class ProductController {
 			const result = await ProductService.getById(req.params.id);
 			return res.status(200).json(result);
 		} catch (error) {
-			return res.status(400).json(error);
+			return res.status(400).json({
+				message: 'Bad Request', details: [{
+					message: {error}} ] });
 		}
 
 	}
@@ -34,7 +40,9 @@ class ProductController {
 			const result = await ProductService.updateById(req.params.id, req.body);
 			return res.status(200).json(result);
 		} catch (error) {
-			return res.status(400).json(error);
+			return res.status(400).json({
+				message: 'Bad Request', details: [{
+					message: {error}} ] });
 		}
         
 	}
@@ -44,7 +52,9 @@ class ProductController {
 			const result = await ProductService.delete(req.params.id);
 			return res.status(204).json(result);
 		} catch (error) {
-			return res.status(400).json(error);
+			return res.status(400).json({
+				message: 'Bad Request', details: [{
+					message: {error}} ] });
 		}
 
 	}
