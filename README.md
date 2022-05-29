@@ -46,7 +46,7 @@
 
 ### 3️⃣ - (opitional) Insert values into the database
 
-    You can use the demos file to insert values on postman 
+    You can use the demos.md file to insert values on postman 
 
 <h1 align> 📁 Employees Endpoints: </h1>
 
