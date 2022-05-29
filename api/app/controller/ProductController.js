@@ -30,7 +30,7 @@ class ProductController {
 
 	async update(req, res) {
 		try {
-			const result = await ProductService.updateProduct(req.params.id, req.body);
+			const result = await ProductService.updateById(req.params.id, req.body);
 			return res.status(200).json(result);
 		} catch (error) {
 			return res.status(400).json(error);
@@ -40,7 +40,7 @@ class ProductController {
 
 	async deleteById(req, res) {
 		try {
-			const result = await ProductService.deleteProduct(req.params.id);
+			const result = await ProductService.delete(req.params.id);
 			return res.status(204).json(result);
 		} catch (error) {
 			return res.status(400).json(error);

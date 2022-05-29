@@ -23,7 +23,7 @@ class ProductService {
 		return result;
 	}
 
-	async deleteById(payload) {
+	async delete(payload) {
 		const result = await ProductRepository.deleteProduct(payload);
 	}
 
