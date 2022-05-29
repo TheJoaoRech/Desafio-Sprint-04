@@ -25,8 +25,10 @@ class EmployeeService {
 				birthday: moment(result[index].birthday, 'YYYY-MM-DD').format('DD/MM/YYYY'),
 				createdAt: result[index].createdAt,
 				updatedAt: result[index]. updatedAt
-			});}
-		return result;
+			});
+		}
+
+		return arrayToReturn;
 	}
 
 	async getById(payload) {
