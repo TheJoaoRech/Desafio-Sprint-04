@@ -24,6 +24,12 @@ const ProductSchema = new mongoose.Schema({
 		required: true
 	},	
 
+	// employeeProduct: {
+	// 	type: mongoose.Schema.Types.ObjectId,
+	// 	ref: 'Employee',
+	// 	required: true
+	// },
+
 
 },
 {versionKey: false}

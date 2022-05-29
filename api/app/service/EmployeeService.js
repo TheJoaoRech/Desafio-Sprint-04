@@ -2,8 +2,6 @@ const EmployeeRepository = require('../repository/EmployeeRepository');
 const Employee = require('../schema/EmployeeSchema');
 const moment = require('moment');
 
-
-
 class EmployeeService {
 	//create employee
 	async create(payload) {
