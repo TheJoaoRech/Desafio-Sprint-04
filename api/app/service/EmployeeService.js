@@ -1,7 +1,7 @@
 const EmployeeRepository = require('../repository/EmployeeRepository');
 const Employee = require('../schema/EmployeeSchema');
 const moment = require('moment');
-const { updateEmployee, deleteEmployee, getById } = require('../repository/EmployeeRepository');
+
 
 class EmployeeService {
 
@@ -14,7 +14,6 @@ class EmployeeService {
 
 	async listAll(payload) {
 		const result = await EmployeeRepository.listAll(payload);
-		const birthdateFormat = moment(result.birthday, 'YYYY-MM-DD').format('DD/MM/YYYY');
 		let arrayToReturn = [];
 		for (let index = 0; index < result.length; index ++) {
 			arrayToReturn.push({
@@ -23,7 +22,7 @@ class EmployeeService {
 				cpf: result[index].cpf,
 				office: result[index].office,
 				situation: result[index].situation,
-				birthday: result[index].birthday,
+				birthday: moment(result[index].birthday, 'YYYY/MM/DD').format('DD/MM/YYYY'),
 				createdAt: result[index].createdAt,
 				updatedAt: result[index]. updatedAt
 			});}
@@ -43,6 +42,8 @@ class EmployeeService {
 	async delete(payload) {
 		const result = await EmployeeRepository.deleteEmployee(payload);
 	}
+
+	
 }
 
 module.exports = new EmployeeService();

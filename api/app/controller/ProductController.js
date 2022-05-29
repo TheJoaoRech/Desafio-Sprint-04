@@ -2,7 +2,8 @@ const ProductService = require('../service/ProductService');
 class ProductController {
 	async create(req, res) {
 		try {
-			const result = await ProductService.create(req.body);
+			const result = await (await ProductService.create(req.body)).populate('_id.employee_id');
+			// const result = await (await ProductService.create({ ...req.body, employee_id: req.employee_id})).populate('employee_id');
 			return res.status(201).json(result);
 		} catch (error) {
 			return res.status(400).json(error);
