@@ -6,7 +6,7 @@ class EmployeeService {
 
 	async create(payload) {
 		const result = await EmployeeRepository.create(payload);
-		const birthdateFormat = moment(result.birthday, 'YYYY-MM-DD').format('DD/MM/YYYY');
+		// const birthdateFormat = moment(result.birthday, 'DD/MM/YYYY').format('YYYY-MM-DD');
 		
 		return result;
 	}
@@ -25,7 +25,8 @@ class EmployeeService {
 				birthday: result[index].birthday,
 				createdAt: result[index].createdAt,
 				updatedAt: result[index]. updatedAt
-			});}
+			});
+		}
 		return result;
 	}
 

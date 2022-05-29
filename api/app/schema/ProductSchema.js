@@ -1,12 +1,10 @@
 const mongoose = require('mongoose'); 
 const { v4: uuidv4 } = require('uuid');
 
-
 const ProductSchema = new mongoose.Schema({
 
 	// _id: {
 	// 	type: mongoose.Schema.Types.ObjectId,
-	// 	default: uuidv4,
 	// },
 
 	name: {

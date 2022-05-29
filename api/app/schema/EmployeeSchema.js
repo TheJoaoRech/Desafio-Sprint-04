@@ -1,14 +1,11 @@
 const mongoose = require('mongoose'); 
 const { v4: uuidv4 } = require('uuid');
-const mongoosePaginate = require('mongoose-paginate');
-
-
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const EmployeeSchema = new mongoose.Schema({
 
 	// _id: {
 	// 	type: mongoose.Schema.Types.ObjectId,
-	// 	default: uuidv4,
 	// },
 
 	name: {
@@ -40,5 +37,9 @@ const EmployeeSchema = new mongoose.Schema({
 {timestamps: true, versionKey: false}
 );
 
+EmployeeSchema.plugin(mongoosePaginate);
+
+
 const Employee = mongoose.model('Employee', EmployeeSchema);
+
 module.exports = Employee;

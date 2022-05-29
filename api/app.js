@@ -6,8 +6,7 @@ require('./infra/database/mongo');
 class App {
 	constructor() {
 		this.server = express();
-		this.middlewares();
-        
+		this.middlewares();  
 		this.routes();
 	}
 
