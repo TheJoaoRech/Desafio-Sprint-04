@@ -12,7 +12,7 @@
 ```
 6.14.15
 ```
-### Used libs:
+### Libs:
 ```
 "eslint": "^8.16.0",
 "nodemon": "^2.0.16"
@@ -20,7 +20,7 @@
 "moment": "^2.29.3",
 "mongoose": "^6.3.4",
 ```
-### Used frameworks:
+### Frameworks:
 ```
 "express": "^4.18.1"
 ```
