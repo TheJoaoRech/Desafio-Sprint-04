@@ -1,7 +1,7 @@
 //respostas dos metodos 
 const EmployeeService = require('../service/EmployeeService');
 class EmployeeController {
-	//create employee
+	//create employe
 	async create(req, res) {
 		try {
 			const result = await EmployeeService.create(req.body);
