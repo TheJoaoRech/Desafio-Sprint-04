@@ -1,4 +1,5 @@
 const EmployeeController = require('../app/controller/EmployeeController');
+const { authSchema } = require('../app/utils/employeeValidate');
 
 module.exports = (server, routes, prefix = '/api/v1/employee') => {
 	routes.post('/', EmployeeController.create);
