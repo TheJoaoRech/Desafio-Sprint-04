@@ -14,11 +14,13 @@
 ```
 ### Libs:
 ```
+"@joi/date": "^2.1.0",
 "eslint": "^8.16.0",
 "nodemon": "^2.0.16"
 "dotenv": "^16.0.1",
-"moment": "^2.29.3",
+"joi": "^17.6.0",
 "mongoose": "^6.3.4",
+"mongoose-paginate-v2": "^1.6.3",
 ```
 ### Frameworks:
 ```
