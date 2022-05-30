@@ -1,17 +1,20 @@
 const EmployeeRepository = require('../repository/EmployeeRepository');
+const { authSchema } = require('../utils/postEmployeeValidation');
 const moment = require('moment');
 
 
 class EmployeeService {
 
 	async create(payload) {
-		// const birthday = moment(payload.birthday, 'DD/MM/YYYY').format('YYYY-MM-DD');
+		// const birthday = moment(payload.birthday, 'DD/MM/YYYY').format('YYYY/MM/DD');
 		const result = await EmployeeRepository.create(payload);
+		// const result = await EmployeeRepository.create({ ...payload}, birthday);
 	
 		return result;
 	}
 
 	async listAll(payload) {
+		const birthday = moment(payload.birthday, 'DD/MM/YYYY').format('YYYY-MM-DD');
 		const result = await EmployeeRepository.listAll(payload);
 		// let arrayToReturn = [];
 		// for (let index = 0; index < result.length; index ++) {

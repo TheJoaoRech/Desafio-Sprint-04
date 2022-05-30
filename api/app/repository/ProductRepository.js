@@ -7,7 +7,7 @@ class ProductRepository {
 	}
 
 	async listAll(payload) {
-		return await ProductSchema.find(payload);
+		return await ProductSchema.paginate({payload}, {limit: 25});
 	}
      
 	async getById(payload) {

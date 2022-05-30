@@ -1,12 +1,9 @@
 const mongoose = require('mongoose'); 
 const mongoosePaginate = require('mongoose-paginate-v2');
 
+const Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 const EmployeeSchema = new mongoose.Schema({
 
-	// _id: {
-	// 	type: mongoose.Schema.Types.ObjectId,
-	// 	default: uuidv4,
-	// },
 
 	name: {
 		type: String,
@@ -15,7 +12,7 @@ const EmployeeSchema = new mongoose.Schema({
 	cpf: {
 		type: String,
 		required: [true, 'cpf is required'],
-		unique: true,
+		unique: [true, 'This cpf already exists'],
 		minlength: 11,
 		maxlength: 11
 	},
@@ -31,13 +28,17 @@ const EmployeeSchema = new mongoose.Schema({
 		required: true
 	},
 	birthday: {
-		type: Date,
+		type: String,
 		required: true,
 	},
 	
 },
 {timestamps: true, versionKey: false}
 );
+
+// EmployeeSchema.virtual('employee_id').get(function() {
+// 	return this._id;
+// });
 
 EmployeeSchema.plugin(mongoosePaginate);
 

@@ -3,11 +3,6 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 
 const ProductSchema = new mongoose.Schema({
 
-	// _id: {
-	// 	type: mongoose.Schema.Types.ObjectId,
-	// 	default: uuidv4,
-	// },
-
 	name: {
 		type: String,
 		required: true
