@@ -19,7 +19,6 @@
 "@joi/date": "^2.1.0"
 "dotenv": "^16.0.1",
 "joi": "^17.6.0",
-"moment": "^2.29.3",
 "mongoose": "^6.3.4",
 "mongoose-paginate-v2": "^1.6.3"
 ```
