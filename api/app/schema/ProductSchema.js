@@ -1,6 +1,5 @@
 const mongoose = require('mongoose'); 
-const { v4: uuidv4 } = require('uuid');
-
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const ProductSchema = new mongoose.Schema({
 
@@ -33,6 +32,8 @@ const ProductSchema = new mongoose.Schema({
 },
 {versionKey: false}
 );
+
+ProductSchema.plugin(mongoosePaginate);
 
 const Product = mongoose.model('Product', ProductSchema);
 module.exports = Product;

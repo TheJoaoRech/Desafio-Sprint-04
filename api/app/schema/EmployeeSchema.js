@@ -1,8 +1,6 @@
 const mongoose = require('mongoose'); 
 const mongoosePaginate = require('mongoose-paginate-v2');
 
-
-
 const EmployeeSchema = new mongoose.Schema({
 
 	// _id: {
