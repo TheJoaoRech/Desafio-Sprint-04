@@ -1,8 +1,10 @@
+const EmployeeService = require('../service/EmployeeService');
 const ProductService = require('../service/ProductService');
 class ProductController {
+
 	async create(req, res) {
 		try {
-			const result = await (await ProductService.create(req.body)).populate('_id.employee_id');
+			const result =  await (await ProductService.create(req.body)).populate('_id.employee_id');
 			return res.status(201).json(result);
 		} catch (error) {
 			return res.status(400).json({
@@ -67,8 +69,6 @@ class ProductController {
 		}
 
 	}
-
-
 
 }
 module.exports = new ProductController ();

@@ -5,7 +5,7 @@ class PeopleRepository{
 		return await EmployeeSchema.create(payload);
 	}
 	async listAll(payload) {
-		return await EmployeeSchema.paginate({payload}, {limit: 25});
+		return await EmployeeSchema.paginate({payload}, {limit: 10});
 	}
 	async getById(payload) {
 		return await EmployeeSchema.findById(payload);

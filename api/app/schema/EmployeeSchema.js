@@ -4,7 +4,6 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 const Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 const EmployeeSchema = new mongoose.Schema({
 
-
 	name: {
 		type: String,
 		required: true
@@ -35,10 +34,6 @@ const EmployeeSchema = new mongoose.Schema({
 },
 {timestamps: true, versionKey: false}
 );
-
-// EmployeeSchema.virtual('employee_id').get(function() {
-// 	return this._id;
-// });
 
 EmployeeSchema.plugin(mongoosePaginate);
 
